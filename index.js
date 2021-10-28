@@ -3,10 +3,12 @@ const cheerio = require("cheerio");
 const pretty = require("pretty");
 const fs = require("fs");
 const { getSystemErrorName } = require("util");
+const { Console } = require("console");
 
 const hashtag ="%23";
 const country = "turkey"; 
-const url = "https://getdaytrends.com/tr/"+ country +"/";
+const url1 = "https://getdaytrends.com/tr/"+ country +"/";
+const url2 = "https://getdaytrends.com";
 
 //collect all trend
 
@@ -69,17 +71,37 @@ async function getTrends() {
 }
 
 //collect trend data
-async function getTrendInfo(){
+async function getTrendInfo(name,url){
 
     try{
-       
-    }
+        let rawdata = fs.readFileSync("./trends.json")
+        let trends = JSON.parse(rawdata);
+        const keys = Object.keys(trends);
+        let trend = {}
+        
 
+        keys.forEach(key => {
+            if(trends[key].Trend.name === name){
+                trend = {... trends[key].Trend}
+                
+            }
+        });
+        
+        const {data} = await axios.get( url + trend.url);
+        const $ = cheerio.load(data);
+
+        const numOfTweet = $(".desc div").html();
+
+        trend.numOfTweet = numOfTweet;
+
+        console.log(trend);
+    }
     catch(err){
         console.log(err);
     }
 }
 
+getTrendInfo("Efendiler",url2);
 
 
 exports.getTrends = getTrends;
