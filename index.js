@@ -90,10 +90,17 @@ async function getTrendInfo(name){
         
         const {data} = await axios.get( url2 + trend.url);
         const $ = cheerio.load(data);
-
+        //console.log(pretty( $.html()));
         const numOfTweet = $(".desc div").html();
 
+        var div = $(".row.stats.mb-3.mb-md-4.mt-3 div").html();
+        const highestRank = $(div).first().html();
+
+       //// const now = $(div).nextSibling().html();
+        //console.log(now);
+
         trend.numOfTweet = await numOfTweet;
+        trend.highestRank = await highestRank;
 
         console.log(trend);
         trend = await {...trend};
@@ -105,6 +112,7 @@ async function getTrendInfo(name){
     }
 }
 
+getTrendInfo("pazar");
 
 
 exports.getTrends = getTrends;
