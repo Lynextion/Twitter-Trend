@@ -15,3 +15,11 @@ app.get('/', async (req, res) => {
     console.log(data);
     
 });
+
+app.post('/getinfo/:trendName', async (req, res) =>{
+
+    const {trendName} = req.params
+    const {data} = await trend.getTrendInfo(trendName).then(data => res.json(data));
+    
+
+});

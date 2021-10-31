@@ -15,7 +15,7 @@ const url2 = "https://getdaytrends.com";
 async function getTrends() {
 //<td class="details small text-muted text-right">99.5K tweetler</td>
     try{
-        const {data} = await axios.get(url);
+        const {data} = await axios.get(url1);
         
         const $ = cheerio.load(data);
         const tbody = $(".card-body div");
@@ -71,7 +71,7 @@ async function getTrends() {
 }
 
 //collect trend data
-async function getTrendInfo(name,url){
+async function getTrendInfo(name){
 
     try{
         let rawdata = fs.readFileSync("./trends.json")
@@ -81,27 +81,31 @@ async function getTrendInfo(name,url){
         
 
         keys.forEach(key => {
-            if(trends[key].Trend.name === name){
+           if(trends[key].Trend.name.includes(name)){
                 trend = {... trends[key].Trend}
                 
             }
         });
         
-        const {data} = await axios.get( url + trend.url);
+        
+        const {data} = await axios.get( url2 + trend.url);
         const $ = cheerio.load(data);
 
         const numOfTweet = $(".desc div").html();
 
-        trend.numOfTweet = numOfTweet;
+        trend.numOfTweet = await numOfTweet;
 
         console.log(trend);
+        trend = await {...trend};
+
+        return trend;
     }
     catch(err){
         console.log(err);
     }
 }
 
-getTrendInfo("Efendiler",url2);
 
 
 exports.getTrends = getTrends;
+exports.getTrendInfo = getTrendInfo;
