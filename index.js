@@ -2,19 +2,92 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const pretty = require("pretty");
 const fs = require("fs");
-const { getSystemErrorName } = require("util");
-const { Console } = require("console");
+
 
 const hashtag ="%23";
-const country = "turkey"; 
-const url1 = "https://getdaytrends.com/tr/"+ country +"/";
 const url2 = "https://getdaytrends.com";
+
+var countries =[
+    "algeria",
+    "argentina",
+    "australia",
+    "austria",
+    "bahrain",
+    "belarus",
+    "belgium",
+    "brazil",
+    "canada",
+    "chile",
+    "colombia",
+    "denmark",
+    "dominican-republic",
+    "ecuador",
+    "egypt",
+    "france",
+    "germany",
+    "ghana",
+    "greece",
+    "guatemala",
+    "india",
+    "indonesia",
+    "ireland",
+    "israel",
+    "italy",
+    "japan",
+    "jordan",
+    "kenya",
+    "korea",
+    "kuwait",
+    "latvia",
+    "lebanon",
+    "malaysia",
+    "mexico",
+    "netherlands",
+    "new-zealand",
+    "nigeria",
+    "norway",
+    "oman",
+    "pakistan",
+    "panama",
+    "peru",
+    "philippines",
+    "poland",
+    "portugal",
+    "puerto-rico",
+    "qatar",
+    "russia",
+    "saudi-arabia",
+    "singapore",
+    "south-africa",
+    "spain",
+    "sweden",
+    "switzerland",
+    "thailand",
+    "turkey",
+    "ukraine",
+    "united-arab-emirates",
+    "united-kingdom",
+    "united-states",
+    "venezuela",
+    "vietnam",
+
+]
 
 //collect all trend
 
-async function getTrends() {
+async function showCountries(){
+
+    countries = await [... countries];
+    console.log(countries);
+    return countries
+}
+
+async function getTrends(country) {
 //<td class="details small text-muted text-right">99.5K tweetler</td>
     try{
+
+        const url1 = "https://getdaytrends.com/tr/"+ country +"/";
+
         const {data} = await axios.get(url1);
         
         const $ = cheerio.load(data);
@@ -81,11 +154,12 @@ async function getTrends() {
 }
 
 //collect trend data
-async function getTrendInfo(name){
+async function getTrendInfo(country,name){
 
     try{
 
         name = name.toLowerCase();
+        country = country.toLowerCase()
 
         let rawdata = fs.readFileSync("./trends.json")
         let trends = JSON.parse(rawdata);
@@ -95,7 +169,7 @@ async function getTrendInfo(name){
 
         keys.forEach(key => {
             try{
-                if(trends[key].Trend.name.toLowerCase().includes(name)){
+                if(trends[key].Trend.name.toLowerCase().includes(name) && trends[key].Trend.country.toLowerCase().includes(country)){
                     trend = {... trends[key].Trend}
                     
                 
@@ -138,6 +212,8 @@ async function getTrendInfo(name){
 
 //getTrendInfo("üçkuruş");
 //getTrends();
+//showCountries();
 
 exports.getTrends = getTrends;
 exports.getTrendInfo = getTrendInfo;
+exports.showCountries = showCountries;
