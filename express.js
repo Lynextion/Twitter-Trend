@@ -17,9 +17,11 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/getinfo/:trendName', async (req, res) =>{
-
-    const {trendName} = req.params
-    const {data} = await trend.getTrendInfo(trendName).then(data => res.json(data));
-    
+    try{
+        const {trendName} = req.params
+        const {data} = await trend.getTrendInfo(trendName).then(data => res.json(data));
+    }catch(err){
+        res.json("Trend not found!!");
+    }
 
 });

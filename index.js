@@ -137,7 +137,7 @@ async function getTrendInfo(name){
 }
 
 //getTrendInfo("üçkuruş");
-getTrends();
+//getTrends();
 
 exports.getTrends = getTrends;
 exports.getTrendInfo = getTrendInfo;
