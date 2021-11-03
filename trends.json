@@ -2,491 +2,521 @@
   "0": {
     "Trend": {
       "country": "turkey",
-      "name": "#pazar",
-      "url": "/tr/turkey/trend/%23pazar/"
+      "name": "#MilleteHizmetYolunda",
+      "url": "/tr/turkey/trend/%23MilleteHizmetYolunda/",
+      "rank": 1
     }
   },
   "1": {
     "Trend": {
       "country": "turkey",
-      "name": "#AvrupaStudyosu",
-      "url": "/tr/turkey/trend/%23AvrupaStudyosu/"
+      "name": "#SistemSebepYoklukSonuç",
+      "url": "/tr/turkey/trend/%23SistemSebepYoklukSonu%C3%A7/",
+      "rank": 2
     }
   },
   "2": {
     "Trend": {
       "country": "turkey",
-      "name": "#KNYvFB",
-      "url": "/tr/turkey/trend/%23KNYvFB/"
+      "name": "#ölmüş",
+      "url": "/tr/turkey/trend/%23%C3%B6lm%C3%BC%C5%9F/",
+      "rank": 3
     }
   },
   "3": {
     "Trend": {
       "country": "turkey",
-      "name": "#AdanalıKızlarTaşGibidir",
-      "url": "/tr/turkey/trend/%23Adanal%C4%B1K%C4%B1zlarTa%C5%9FGibidir/"
+      "name": "#ÇokYaşaREİS",
+      "url": "/tr/turkey/trend/%23%C3%87okYa%C5%9FaRE%C4%B0S/",
+      "rank": 4
     }
   },
   "4": {
     "Trend": {
       "country": "turkey",
-      "name": "#Erdalİnönü",
-      "url": "/tr/turkey/trend/%23Erdal%C4%B0n%C3%B6n%C3%BC/"
+      "name": "#3Kasım2002",
+      "url": "/tr/turkey/trend/%233Kas%C4%B1m2002/",
+      "rank": 5
     }
   },
   "5": {
     "Trend": {
       "country": "turkey",
-      "name": "ŞantajKaseti Masalı",
-      "url": "/tr/turkey/trend/%C5%9EantajKaseti%20Masal%C4%B1/"
+      "name": "H A Z I R M I Y I Z",
+      "url": "/tr/turkey/trend/H%20A%20Z%20I%20R%20M%20I%20Y%20I%20Z/",
+      "rank": 6
     }
   },
   "6": {
     "Trend": {
       "country": "turkey",
-      "name": "Ali Koç",
-      "url": "/tr/turkey/trend/Ali%20Ko%C3%A7/"
+      "name": "TÜİK",
+      "url": "/tr/turkey/trend/T%C3%9C%C4%B0K/",
+      "rank": 7
     }
   },
   "7": {
     "Trend": {
       "country": "turkey",
-      "name": "i̇nci deri",
-      "url": "/tr/turkey/trend/i%CC%87nci%20deri/"
+      "name": "JIN OST IS COMING",
+      "url": "/tr/turkey/trend/JIN%20OST%20IS%20COMING/",
+      "rank": 8
     }
   },
   "8": {
     "Trend": {
       "country": "turkey",
-      "name": "Fenerbahçe",
-      "url": "/tr/turkey/trend/Fenerbah%C3%A7e/"
+      "name": "YOURS BY JIN",
+      "url": "/tr/turkey/trend/YOURS%20BY%20JIN/",
+      "rank": 9
     }
   },
   "9": {
     "Trend": {
       "country": "turkey",
-      "name": "Cüneyt Çakır",
-      "url": "/tr/turkey/trend/C%C3%BCneyt%20%C3%87ak%C4%B1r/"
+      "name": "ENAG",
+      "url": "/tr/turkey/trend/ENAG/",
+      "rank": 10
     }
   },
   "10": {
     "Trend": {
       "country": "turkey",
-      "name": "Kenan",
-      "url": "/tr/turkey/trend/Kenan/"
+      "name": "YıllardırBitmeyen Yalan",
+      "url": "/tr/turkey/trend/Y%C4%B1llard%C4%B1rBitmeyen%20Yalan/",
+      "rank": 11
     }
   },
   "11": {
     "Trend": {
       "country": "turkey",
-      "name": "Yaşa Beşiktaş",
-      "url": "/tr/turkey/trend/Ya%C5%9Fa%20Be%C5%9Fikta%C5%9F/"
+      "name": "YOURS IS COMING",
+      "url": "/tr/turkey/trend/YOURS%20IS%20COMING/",
+      "rank": 12
     }
   },
   "12": {
     "Trend": {
       "country": "turkey",
-      "name": "SquidGame Zihniyeti",
-      "url": "/tr/turkey/trend/SquidGame%20Zihniyeti/"
+      "name": "TÜFE",
+      "url": "/tr/turkey/trend/T%C3%9CFE/",
+      "rank": 13
     }
   },
   "13": {
     "Trend": {
       "country": "turkey",
-      "name": "Konya",
-      "url": "/tr/turkey/trend/Konya/"
+      "name": "Nice 19",
+      "url": "/tr/turkey/trend/Nice%2019/",
+      "rank": 14
     }
   },
   "14": {
     "Trend": {
       "country": "turkey",
-      "name": "Atatürk",
-      "url": "/tr/turkey/trend/Atat%C3%BCrk/"
+      "name": "Nice AK",
+      "url": "/tr/turkey/trend/Nice%20AK/",
+      "rank": 15
     }
   },
   "15": {
     "Trend": {
       "country": "turkey",
-      "name": "Skymapping",
-      "url": "/tr/turkey/trend/Skymapping/"
+      "name": "Selvi",
+      "url": "/tr/turkey/trend/Selvi/",
+      "rank": 16
     }
   },
   "16": {
     "Trend": {
       "country": "turkey",
-      "name": "GüzelGünler Göreceğiz",
-      "url": "/tr/turkey/trend/G%C3%BCzelG%C3%BCnler%20G%C3%B6rece%C4%9Fiz/"
+      "name": "Cem Yılmaz",
+      "url": "/tr/turkey/trend/Cem%20Y%C4%B1lmaz/",
+      "rank": 17
     }
   },
   "17": {
     "Trend": {
       "country": "turkey",
-      "name": "Gustavo",
-      "url": "/tr/turkey/trend/Gustavo/"
+      "name": "Sandıkta",
+      "url": "/tr/turkey/trend/Sand%C4%B1kta/",
+      "rank": 18
     }
   },
   "18": {
     "Trend": {
       "country": "turkey",
-      "name": "Ankara KitapFuarı",
-      "url": "/tr/turkey/trend/Ankara%20KitapFuar%C4%B1/"
+      "name": "10 kasım'da",
+      "url": "/tr/turkey/trend/10%20kas%C4%B1m'da/",
+      "rank": 19
     }
   },
   "19": {
     "Trend": {
       "country": "turkey",
-      "name": "Atiba",
-      "url": "/tr/turkey/trend/Atiba/"
+      "name": "Günaydın Can",
+      "url": "/tr/turkey/trend/G%C3%BCnayd%C4%B1n%20Can/",
+      "rank": 20
     }
   },
   "20": {
     "Trend": {
       "country": "turkey",
-      "name": "Adanaya YolculukVar",
-      "url": "/tr/turkey/trend/Adanaya%20YolculukVar/"
+      "name": "Evrensel",
+      "url": "/tr/turkey/trend/Evrensel/",
+      "rank": 21
     }
   },
   "21": {
     "Trend": {
       "country": "turkey",
-      "name": "Gunaydinn",
-      "url": "/tr/turkey/trend/Gunaydinn/"
+      "name": "Ölmesin",
+      "url": "/tr/turkey/trend/%C3%96lmesin/",
+      "rank": 22
     }
   },
   "22": {
     "Trend": {
       "country": "turkey",
-      "name": "Yaptınız",
-      "url": "/tr/turkey/trend/Yapt%C4%B1n%C4%B1z/"
+      "name": "Selahattin Demirtaş",
+      "url": "/tr/turkey/trend/Selahattin%20Demirta%C5%9F/",
+      "rank": 23
     }
   },
   "23": {
     "Trend": {
       "country": "turkey",
-      "name": "Altay",
-      "url": "/tr/turkey/trend/Altay/"
+      "name": "YALANCI",
+      "url": "/tr/turkey/trend/YALANCI/",
+      "rank": 24
     }
   },
   "24": {
     "Trend": {
       "country": "turkey",
-      "name": "GetirSandığı BişiDenicez",
-      "url": "/tr/turkey/trend/GetirSand%C4%B1%C4%9F%C4%B1%20Bi%C5%9FiDenicez/"
+      "name": "#Çarşamba",
+      "url": "/tr/turkey/trend/%23%C3%87ar%C5%9Famba/",
+      "rank": 25
     }
   },
   "25": {
     "Trend": {
       "country": "turkey",
-      "name": "CHP HDP BİRLEŞSİN",
-      "url": "/tr/turkey/trend/CHP%20HDP%20B%C4%B0RLE%C5%9ES%C4%B0N/"
+      "name": "#enflasyon",
+      "url": "/tr/turkey/trend/%23enflasyon/",
+      "rank": 26
     }
   },
   "26": {
     "Trend": {
       "country": "turkey",
-      "name": "Hatay",
-      "url": "/tr/turkey/trend/Hatay/"
+      "name": "#MilleteHizmette19Yıl",
+      "url": "/tr/turkey/trend/%23MilleteHizmette19Y%C4%B1l/",
+      "rank": 27
     }
   },
   "27": {
     "Trend": {
       "country": "turkey",
-      "name": "EngelliÖğrt YarınAnkrada",
-      "url": "/tr/turkey/trend/Engelli%C3%96%C4%9Frt%20Yar%C4%B1nAnkrada/"
+      "name": "#RecepTayyipErdoğan",
+      "url": "/tr/turkey/trend/%23RecepTayyipErdo%C4%9Fan/",
+      "rank": 28
     }
   },
   "28": {
     "Trend": {
       "country": "turkey",
-      "name": "İSAM",
-      "url": "/tr/turkey/trend/%C4%B0SAM/"
+      "name": "#BeşiktaşınMaçıVar",
+      "url": "/tr/turkey/trend/%23Be%C5%9Fikta%C5%9F%C4%B1nMa%C3%A7%C4%B1Var/",
+      "rank": 29
     }
   },
   "29": {
     "Trend": {
       "country": "turkey",
-      "name": "Montero",
-      "url": "/tr/turkey/trend/Montero/"
+      "name": "#AbdullahÇatlı",
+      "url": "/tr/turkey/trend/%23Abdullah%C3%87atl%C4%B1/",
+      "rank": 30
     }
   },
   "30": {
     "Trend": {
       "country": "turkey",
-      "name": "Vítor",
-      "url": "/tr/turkey/trend/V%C3%ADtor/"
+      "name": "#AKParti",
+      "url": "/tr/turkey/trend/%23AKParti/",
+      "rank": 31
     }
   },
   "31": {
     "Trend": {
       "country": "turkey",
-      "name": "HastaTutsaklara Özgürlük",
-      "url": "/tr/turkey/trend/HastaTutsaklara%20%C3%96zg%C3%BCrl%C3%BCk/"
+      "name": "#BuNeYamanÇelişki",
+      "url": "/tr/turkey/trend/%23BuNeYaman%C3%87eli%C5%9Fki/",
+      "rank": 32
     }
   },
   "32": {
     "Trend": {
       "country": "turkey",
-      "name": "Kurdistan",
-      "url": "/tr/turkey/trend/Kurdistan/"
+      "name": "#OrganBağışıHaftası",
+      "url": "/tr/turkey/trend/%23OrganBa%C4%9F%C4%B1%C5%9F%C4%B1Haftas%C4%B1/",
+      "rank": 33
     }
   },
   "33": {
     "Trend": {
       "country": "turkey",
-      "name": "Adana Valisi",
-      "url": "/tr/turkey/trend/Adana%20Valisi/"
+      "name": "#StresliyimÇünkü",
+      "url": "/tr/turkey/trend/%23Stresliyim%C3%87%C3%BCnk%C3%BC/",
+      "rank": 34
     }
   },
   "34": {
     "Trend": {
       "country": "turkey",
-      "name": "AF YOKSA OY YOK",
-      "url": "/tr/turkey/trend/AF%20YOKSA%20OY%20YOK/"
+      "name": "#HayallerGerçekOldu",
+      "url": "/tr/turkey/trend/%23HayallerGer%C3%A7ekOldu/",
+      "rank": 35
     }
   },
   "35": {
     "Trend": {
       "country": "turkey",
-      "name": "Yılı Kutlu Olsun",
-      "url": "/tr/turkey/trend/Y%C4%B1l%C4%B1%20Kutlu%20Olsun/"
+      "name": "#AklımaGelen",
+      "url": "/tr/turkey/trend/%23Akl%C4%B1maGelen/",
+      "rank": 36
     }
   },
   "36": {
     "Trend": {
       "country": "turkey",
-      "name": "Rojbaş",
-      "url": "/tr/turkey/trend/Rojba%C5%9F/"
+      "name": "#ihaas",
+      "url": "/tr/turkey/trend/%23ihaas/",
+      "rank": 37
     }
   },
   "37": {
     "Trend": {
       "country": "turkey",
-      "name": "Mehmet Topal",
-      "url": "/tr/turkey/trend/Mehmet%20Topal/"
+      "name": "#Darbe",
+      "url": "/tr/turkey/trend/%23Darbe/",
+      "rank": 38
     }
   },
   "38": {
     "Trend": {
       "country": "turkey",
-      "name": "Billong",
-      "url": "/tr/turkey/trend/Billong/"
+      "name": "#SCPBJK",
+      "url": "/tr/turkey/trend/%23SCPBJK/",
+      "rank": 39
     }
   },
   "39": {
     "Trend": {
       "country": "turkey",
-      "name": "Jungwoo",
-      "url": "/tr/turkey/trend/Jungwoo/"
+      "name": "#ErkenciTayfa",
+      "url": "/tr/turkey/trend/%23ErkenciTayfa/",
+      "rank": 40
     }
   },
   "40": {
     "Trend": {
       "country": "turkey",
-      "name": "Web 3.0",
-      "url": "/tr/turkey/trend/Web%203.0/"
+      "name": "#AkpDeninceAklıma",
+      "url": "/tr/turkey/trend/%23AkpDeninceAkl%C4%B1ma/",
+      "rank": 41
     }
   },
   "41": {
     "Trend": {
       "country": "turkey",
-      "name": "BeklenenKonferans Yarın",
-      "url": "/tr/turkey/trend/BeklenenKonferans%20Yar%C4%B1n/"
+      "name": "#ttkom",
+      "url": "/tr/turkey/trend/%23ttkom/",
+      "rank": 42
     }
   },
   "42": {
     "Trend": {
       "country": "turkey",
-      "name": "Erol Dok",
-      "url": "/tr/turkey/trend/Erol%20Dok/"
+      "name": "#ayasofyadamevlit",
+      "url": "/tr/turkey/trend/%23ayasofyadamevlit/",
+      "rank": 43
     }
   },
   "43": {
     "Trend": {
       "country": "turkey",
-      "name": "Aykut",
-      "url": "/tr/turkey/trend/Aykut/"
+      "name": "#profdrserhansakaryahaddinibil",
+      "url": "/tr/turkey/trend/%23profdrserhansakaryahaddinibil/",
+      "rank": 44
     }
   },
   "44": {
     "Trend": {
       "country": "turkey",
-      "name": "Sırrı",
-      "url": "/tr/turkey/trend/S%C4%B1rr%C4%B1/"
+      "name": "#Ronaldo",
+      "url": "/tr/turkey/trend/%23Ronaldo/",
+      "rank": 45
     }
   },
   "45": {
     "Trend": {
       "country": "turkey",
-      "name": "Zajc",
-      "url": "/tr/turkey/trend/Zajc/"
+      "name": "#COP26",
+      "url": "/tr/turkey/trend/%23COP26/",
+      "rank": 46
     }
   },
   "46": {
     "Trend": {
       "country": "turkey",
-      "name": "Biden",
-      "url": "/tr/turkey/trend/Biden/"
+      "name": "#ÖnlemYokOnlineŞart",
+      "url": "/tr/turkey/trend/%23%C3%96nlemYokOnline%C5%9Eart/",
+      "rank": 47
     }
   },
   "47": {
     "Trend": {
       "country": "turkey",
-      "name": "Teşkilat Akademisi",
-      "url": "/tr/turkey/trend/Te%C5%9Fkilat%20Akademisi/"
+      "name": "#1103우리에게달려온날_민혁데이",
+      "url": "/tr/turkey/trend/%231103%EC%9A%B0%EB%A6%AC%EC%97%90%EA%B2%8C%EB%8B%AC%EB%A0%A4%EC%98%A8%EB%82%A0_%EB%AF%BC%ED%98%81%EB%8D%B0%EC%9D%B4/",
+      "rank": 48
     }
   },
   "48": {
     "Trend": {
       "country": "turkey",
-      "name": "Sergen",
-      "url": "/tr/turkey/trend/Sergen/"
+      "name": "#HBDtoMINHYUK",
+      "url": "/tr/turkey/trend/%23HBDtoMINHYUK/",
+      "rank": 49
     }
   },
   "49": {
     "Trend": {
       "country": "turkey",
-      "name": "Mesut Yılmaz",
-      "url": "/tr/turkey/trend/Mesut%20Y%C4%B1lmaz/"
+      "name": "#BalkondaGörüşürüz",
+      "url": "/tr/turkey/trend/%23BalkondaG%C3%B6r%C3%BC%C5%9F%C3%BCr%C3%BCz/",
+      "rank": 50
     }
   },
   "50": {
     "Trend": {
       "country": "turkey",
-      "name": "#halloween2021",
-      "url": "/tr/turkey/trend/%23halloween2021/"
+      "name": "#AkpDeninceAklıma",
+      "url": "/tr/turkey/trend/%23AkpDeninceAkl%C4%B1ma/",
+      "rank": 51
     }
   },
   "51": {
     "Trend": {
       "country": "turkey",
-      "name": "#LastBreath_MarkTuan",
-      "url": "/tr/turkey/trend/%23LastBreath_MarkTuan/"
+      "name": "#HevalMeral",
+      "url": "/tr/turkey/trend/%23HevalMeral/",
+      "rank": 52
     }
   },
   "52": {
     "Trend": {
       "country": "turkey",
-      "name": "#29Ekim",
-      "url": "/tr/turkey/trend/%2329Ekim/"
+      "name": "#catecoin",
+      "url": "/tr/turkey/trend/%23catecoin/",
+      "rank": 53
     }
   },
   "53": {
     "Trend": {
       "country": "turkey",
-      "name": "#AKMyeniden",
-      "url": "/tr/turkey/trend/%23AKMyeniden/"
+      "name": "#ATAMUN",
+      "url": "/tr/turkey/trend/%23ATAMUN/",
+      "rank": 54
     }
   },
   "54": {
     "Trend": {
       "country": "turkey",
-      "name": "#OkullarVirüshaneOldu",
-      "url": "/tr/turkey/trend/%23OkullarVir%C3%BCshaneOldu/"
+      "name": "#HayallerGerçekOldu",
+      "url": "/tr/turkey/trend/%23HayallerGer%C3%A7ekOldu/",
+      "rank": 55
     }
   },
   "55": {
     "Trend": {
       "country": "turkey",
-      "name": "#AşkSizinleAsDor",
-      "url": "/tr/turkey/trend/%23A%C5%9FkSizinleAsDor/"
+      "name": "#AkpDeninceAklıma",
+      "url": "/tr/turkey/trend/%23AkpDeninceAkl%C4%B1ma/",
+      "rank": 56
     }
   },
   "56": {
     "Trend": {
       "country": "turkey",
-      "name": "#BabyDoge",
-      "url": "/tr/turkey/trend/%23BabyDoge/"
+      "name": "#KırmızıÇizgimizSergenYalçın",
+      "url": "/tr/turkey/trend/%23K%C4%B1rm%C4%B1z%C4%B1%C3%87izgimizSergenYal%C3%A7%C4%B1n/",
+      "rank": 57
     }
   },
   "57": {
     "Trend": {
       "country": "turkey",
-      "name": "#LeiArs",
-      "url": "/tr/turkey/trend/%23LeiArs/"
+      "name": "#CumhurunAdayıKim",
+      "url": "/tr/turkey/trend/%23CumhurunAday%C4%B1Kim/",
+      "rank": 58
     }
   },
   "58": {
     "Trend": {
       "country": "turkey",
-      "name": "#elkızı",
-      "url": "/tr/turkey/trend/%23elk%C4%B1z%C4%B1/"
+      "name": "#ölmüş",
+      "url": "/tr/turkey/trend/%23%C3%B6lm%C3%BC%C5%9F/",
+      "rank": 59
     }
   },
   "59": {
     "Trend": {
       "country": "turkey",
-      "name": "#temiztwitch",
-      "url": "/tr/turkey/trend/%23temiztwitch/"
+      "name": "#MasumlarApartmanı",
+      "url": "/tr/turkey/trend/%23MasumlarApartman%C4%B1/",
+      "rank": 60
     }
   },
   "60": {
     "Trend": {
       "country": "turkey",
-      "name": "#KONvFB",
-      "url": "/tr/turkey/trend/%23KONvFB/"
+      "name": "#AzizYıldırım",
+      "url": "/tr/turkey/trend/%23AzizY%C4%B1ld%C4%B1r%C4%B1m/",
+      "rank": 61
     }
   },
   "61": {
     "Trend": {
       "country": "turkey",
-      "name": "#htyvbjk",
-      "url": "/tr/turkey/trend/%23htyvbjk/"
+      "name": "#LösemiliÇocuklarHaftası",
+      "url": "/tr/turkey/trend/%23L%C3%B6semili%C3%87ocuklarHaftas%C4%B1/",
+      "rank": 62
     }
   },
   "62": {
     "Trend": {
       "country": "turkey",
-      "name": "#KNYvFB",
-      "url": "/tr/turkey/trend/%23KNYvFB/"
+      "name": "#ayasofyadamevlit",
+      "url": "/tr/turkey/trend/%23ayasofyadamevlit/",
+      "rank": 63
     }
   },
   "63": {
     "Trend": {
       "country": "turkey",
-      "name": "#AinuTokenMoon",
-      "url": "/tr/turkey/trend/%23AinuTokenMoon/"
+      "name": "#SanaSöz",
+      "url": "/tr/turkey/trend/%23SanaS%C3%B6z/",
+      "rank": 64
     }
   },
   "64": {
     "Trend": {
       "country": "turkey",
-      "name": "#AlTaksiniBaşınaÇal",
-      "url": "/tr/turkey/trend/%23AlTaksiniBa%C5%9F%C4%B1na%C3%87al/"
-    }
-  },
-  "65": {
-    "Trend": {
-      "country": "turkey",
-      "name": "#OkullarVirüshaneOldu",
-      "url": "/tr/turkey/trend/%23OkullarVir%C3%BCshaneOldu/"
-    }
-  },
-  "66": {
-    "Trend": {
-      "country": "turkey",
-      "name": "#AlınYazısı",
-      "url": "/tr/turkey/trend/%23Al%C4%B1nYaz%C4%B1s%C4%B1/"
-    }
-  },
-  "67": {
-    "Trend": {
-      "country": "turkey",
-      "name": "#GönülDağı",
-      "url": "/tr/turkey/trend/%23G%C3%B6n%C3%BClDa%C4%9F%C4%B1/"
-    }
-  },
-  "68": {
-    "Trend": {
-      "country": "turkey",
-      "name": "#TarihiYalıyaKaçakYapı",
-      "url": "/tr/turkey/trend/%23TarihiYal%C4%B1yaKa%C3%A7akYap%C4%B1/"
-    }
-  },
-  "69": {
-    "Trend": {
-      "country": "turkey",
-      "name": "#ResmiGazetedeEYT",
-      "url": "/tr/turkey/trend/%23ResmiGazetedeEYT/"
+      "name": "#salı",
+      "url": "/tr/turkey/trend/%23sal%C4%B1/",
+      "rank": 65
     }
   }
 }
