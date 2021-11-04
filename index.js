@@ -86,7 +86,12 @@ async function getTrends(country) {
 //<td class="details small text-muted text-right">99.5K tweetler</td>
     try{
 
-        const url1 = "https://getdaytrends.com/tr/"+ country +"/";
+        var url1 = "https://getdaytrends.com/tr/"+ country +"/";
+
+        if(country === null){
+            url1 = "https://getdaytrends.com/tr/"; 
+            country = "worldwide";
+        }
 
         const {data} = await axios.get(url1);
         
