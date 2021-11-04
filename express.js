@@ -2,10 +2,10 @@ const express = require('express');
 const trend = require('./index')
 
 const app = express();
-const port = '3000';
+
 
 app.use(express.json());
-app.listen(port ,() => console.log(`Listening on port ${port}`));
+app.listen(process.env.PORT || 5000, () => {console.log('Server is running')});
 
 
 
