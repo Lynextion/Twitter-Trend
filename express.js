@@ -10,16 +10,25 @@ app.listen(process.env.PORT || 5000, () => {console.log('Server is running')});
 
 
 app.get('/', async (req,res) => {
-    const {data} = await trend.getTrends(null).then(data => res.json(data));
-    
+    try{
+        const {data} = await trend.getTrends(null).then(data => res.json(data));
+    }
+    catch(err){
+        res.status(400).json({'message':'invalid endpoint'});
+    }
 
 });
 
 app.get('/trend/:country', async (req, res) => {
-    const {country} = req.params;
-    const {data} = await trend.getTrends(country).then(data => res.json(data));
-    console.log(data);
-    
+
+    try{
+        const {country} = req.params;
+        const {data} = await trend.getTrends(country).then(data => res.json(data));
+        console.log(data);
+    }
+    catch(err){
+        res.status(404).json({'message':'country can not be found'})
+    }
 });
 
 app.get('/getinfo/:country/:trendName', async (req, res) =>{
@@ -29,7 +38,7 @@ app.get('/getinfo/:country/:trendName', async (req, res) =>{
         console.log(country)
         const {data} = await trend.getTrendInfo(country,trendName).then(data => res.json(data));
     }catch(err){
-        res.json("Trend not found!!");
+        res.status(404).json("Trend not found!!");
         
        
     }
