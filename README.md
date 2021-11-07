@@ -47,7 +47,7 @@ GET /getinfo/${country}/${trend}
 Install my-project with npm
 
 ```bash
-  npm install twitter-trend
+  npm install tweet-trend
   cd tweet-trend
 ```
     
