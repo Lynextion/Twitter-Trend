@@ -16,7 +16,7 @@ This api collects twitter trends around the world, or you can collect trends cou
 #### Get all items
 
 ```http
-  GET /
+GET /
 ```
 
 | Parameter | Type     | Description                |
@@ -26,7 +26,7 @@ This api collects twitter trends around the world, or you can collect trends cou
 #### Get item
 
 ```http
-  GET /trend/${country}
+GET /trend/${country}
 ```
 
 | Parameter | Type     | Description                       |
