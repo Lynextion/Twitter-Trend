@@ -1,5 +1,6 @@
 const express = require('express');
 const trend = require('./index')
+const fs = require('fs')
 
 const app = express();
 
