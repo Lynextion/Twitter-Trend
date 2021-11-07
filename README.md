@@ -48,6 +48,6 @@ Install my-project with npm
 
 ```bash
   npm install twitter-trend
-  cd twitter-trend
+  cd tweet-trend
 ```
     

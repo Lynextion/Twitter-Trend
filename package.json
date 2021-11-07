@@ -1,5 +1,5 @@
 {
-  "name": "tweet-topic-api",
+  "name": "tweet-trend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "node express.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "lynextion",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.23.0",
