@@ -83,6 +83,25 @@ async function showCountries(){
 }
 
 async function getTrends(country) {
+
+    //Checks data is wanted to collected is exist
+    try{
+        let rawdata = fs.readFileSync(country + ".json")
+        let json = JSON.parse(rawdata);
+        let currentTıme = Date.now();
+
+        if((currentTıme - json.timeStamp ) > 1800000){
+            console.log("data is old")
+            throw new Error("data is old");
+        }
+        else{
+            console.log("data is new")
+            return json;
+        }
+    }
+
+    catch(err){
+
 //<td class="details small text-muted text-right">99.5K tweetler</td>
     try{
 
@@ -134,27 +153,30 @@ async function getTrends(country) {
                 trends.push(name);
                 
             }
+            name.timeStamp = Date.now();
         
          });   
         }
-        trends = await {...trends};
+
         console.log(trends)
-           
-          //write to file
-        fs.writeFile("trends.json", JSON.stringify(trends, null, 2), (err) => {
+        var fileName = country + ".json";
+        //write to file
+        fs.writeFile(fileName, JSON.stringify(trends, null, 2), (err) => {
             if (err) {
-              console.error(err);
-              return;
+                console.error(err);
+                return;
             }
             console.log("Successfully written data to file");
-          });
-          return trends;
+        });
+        trends = await {...trends};
+        
+              return trends;
     }   
 
     catch(err){
         console.log(err);
     }
-
+}
     
 }
 
@@ -166,7 +188,7 @@ async function getTrendInfo(country,name){
         name = name.toLowerCase();
         country = country.toLowerCase()
 
-        let rawdata = fs.readFileSync("./trends.json")
+        let rawdata = fs.readFileSync(country + ".json")
         let trends = JSON.parse(rawdata);
         const keys = Object.keys(trends);
         let trend = {}
