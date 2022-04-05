@@ -6,7 +6,7 @@
       "url": "/tr/turkey/trend/%23AvukatlarG%C3%BCn%C3%BC/",
       "rank": 1
     },
-    "timeStamp": 1649153000114
+    "timeStamp": 1649157493406
   },
   {
     "Trend": {
@@ -15,6 +15,15 @@
       "url": "/tr/turkey/trend/%23m%C3%BCgeanl%C4%B1/",
       "rank": 2
     },
-    "timeStamp": 1649153000117
+    "timeStamp": 1649157493407
+  },
+  {
+    "Trend": {
+      "country": "turkey",
+      "name": "#AvukatlarGünü",
+      "url": "/tr/turkey/trend/%23AvukatlarG%C3%BCn%C3%BC/",
+      "rank": 52
+    },
+    "timeStamp": 1649157493412
   }
 ]

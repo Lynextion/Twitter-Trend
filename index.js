@@ -84,110 +84,192 @@ async function showCountries() {
 
 async function getTrends(country, limit) {
 
-    //Checks data is wanted to collected is exist
-    try {
-        let rawdata = fs.readFileSync(country + ".json")
-        let json = JSON.parse(rawdata);
-        let currentTime = Date.now();
 
-        if ((currentTime - json.timeStamp) > 1800000) {
-            console.log("data is old")
-            throw new Error("data is old");
+
+
+    //<td class="details small text-muted text-right">99.5K tweetler</td>
+    try {
+
+        var url1 = "https://getdaytrends.com/tr/" + country + "/";
+
+        if (country === null) {
+            url1 = "https://getdaytrends.com/tr/";
+            country = "worldwide";
         }
-        else {
-            console.log("data is new")
-            return json;
+
+        const { data } = await axios.get(url1);
+
+        const $ = cheerio.load(data);
+        const tbody = $(".card-body div");
+        console.log(pretty($("h1").text()));
+        var trends = [];
+        var rank = 1
+
+        //check if trend is active
+        if ($("h1").text().includes("Twitter Trendleri")) {
+            const trs = tbody.find("tr");
+            const title = trs.find("td");
+            const num = tbody.find("th");
+
+
+
+            title.each((idx, el) => {
+
+
+                const name = {
+                    Trend: {
+                        country: country,
+                        name: "",
+                        url: "",
+                        rank: 0,
+                    },
+                }
+                console.log("index", limit);
+
+                if ((rank <= limit && limit != 0) || limit == 0) {
+
+                    if ($(el).children("a").text() !== "") {
+
+                        name.Trend.name = $(el).children("a").text();
+
+
+                        if ($(el).children("a").attr("href") !== undefined) {
+                            name.Trend.url = $(el).children("a").attr("href");
+                            name.Trend.rank = rank;
+                            rank++;
+                        }
+
+
+                        trends.push(name);
+
+                    }
+                }
+
+                name.timeStamp = Date.now();
+
+
+
+            });
         }
+
+        console.log(trends)
+        var fileName = country + ".json";
+        //write to file
+        fs.writeFile(fileName, JSON.stringify(trends, null, 2), (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            console.log("Successfully written data to file");
+        });
+        trends = await { ...trends };
+
+        return trends;
     }
 
     catch (err) {
-
-        //<td class="details small text-muted text-right">99.5K tweetler</td>
-        try {
-
-            var url1 = "https://getdaytrends.com/tr/" + country + "/";
-
-            if (country === null) {
-                url1 = "https://getdaytrends.com/tr/";
-                country = "worldwide";
-            }
-
-            const { data } = await axios.get(url1);
-
-            const $ = cheerio.load(data);
-            const tbody = $(".card-body div");
-            console.log(pretty($("h1").text()));
-            var trends = [];
-            var rank = 1
-
-            //check if trend is active
-            if ($("h1").text().includes("Twitter Trendleri")) {
-                const trs = tbody.find("tr");
-                const title = trs.find("td");
-                const num = tbody.find("th");
+        console.log(err);
+    }
 
 
-
-                title.each((idx, el) => {
-
-
-                    const name = {
-                        Trend: {
-                            country: country,
-                            name: "",
-                            url: "",
-                            rank: 0,
-                        },
-                    }
-                    console.log("index", limit);
-
-                    if ((rank <= limit && limit != 0) || limit == 0) {
-
-                        if ($(el).children("a").text() !== "") {
-
-                            name.Trend.name = $(el).children("a").text();
+}
 
 
-                            if ($(el).children("a").attr("href") !== undefined) {
-                                name.Trend.url = $(el).children("a").attr("href");
-                                name.Trend.rank = rank;
-                                rank++;
-                            }
+async function findTrend(country, wantTrend) {
+    try {
+
+        var url1 = "https://getdaytrends.com/tr/" + country + "/";
+
+        if (country === null) {
+            url1 = "https://getdaytrends.com/tr/";
+            country = "worldwide";
+        }
+
+        var newTrends = [];
+
+        const { data } = await axios.get(url1);
+
+        const $ = cheerio.load(data);
+        const tbody = $(".card-body div");
+        console.log(pretty($("h1").text()));
+        var trends = [];
+        var rank = 1
+
+        //check if trend is active
+        if ($("h1").text().includes("Twitter Trendleri")) {
+            const trs = tbody.find("tr");
+            const title = trs.find("td");
+            const num = tbody.find("th");
+
+            //find trend
+
+            console.log("index", wantTrend);
 
 
-                            trends.push(name);
-
-                        }
-                    }
-
-                    name.timeStamp = Date.now();
+            title.each((idx, el) => {
 
 
-
-                });
-            }
-
-            console.log(trends)
-            var fileName = country + ".json";
-            //write to file
-            fs.writeFile(fileName, JSON.stringify(trends, null, 2), (err) => {
-                if (err) {
-                    console.error(err);
-                    return;
+                const name = {
+                    Trend: {
+                        country: country,
+                        name: "",
+                        url: "",
+                        rank: 0,
+                    },
                 }
-                console.log("Successfully written data to file");
+
+
+                if ($(el).children("a").text() !== "") {
+                    name.Trend.name = $(el).children("a").text();
+
+                    if ($(el).children("a").attr("href") !== undefined) {
+                        name.Trend.url = $(el).children("a").attr("href");
+                        name.Trend.rank = rank;
+                        rank++;
+                    }
+
+                    trends.push(name);
+
+                }
+
+                name.timeStamp = Date.now();
+
+
             });
-            trends = await { ...trends };
+        }
+        let info = wantTrend["Trends"];
 
-            return trends;
+
+        for (var keys in trends) {
+            console.log(trends[keys].Trend.name);
+            for (var key in info) {
+                if (trends[keys].Trend.name === info[key]) {
+                    newTrends.push(trends[keys]);
+                }
+            }
         }
 
-        catch (err) {
-            console.log(err);
-        }
+        console.log(newTrends)
+        var fileName = country + ".json";
+        //write to file
+        fs.writeFile(fileName, JSON.stringify(newTrends, null, 2), (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            console.log("Successfully written data to file");
+        });
+        newTrends = await { ...newTrends };
+
+        return newTrends;
+    }
+
+    catch (err) {
+        console.log(err);
     }
 
 }
+
 
 //collect trend data
 async function getTrendInfo(country, name) {
@@ -253,3 +335,4 @@ async function getTrendInfo(country, name) {
 exports.getTrends = getTrends;
 exports.getTrendInfo = getTrendInfo;
 exports.showCountries = showCountries;
+exports.findTrend = findTrend;

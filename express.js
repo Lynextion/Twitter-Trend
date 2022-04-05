@@ -1,11 +1,12 @@
 const express = require('express');
 const trend = require('./index')
 const fs = require('fs')
+const bodyParser = require('body-parser');
 
 const app = express();
 
 
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }), express.json());
 app.listen(process.env.PORT || 5000, () => { console.log('Server is running') });
 
 
@@ -60,3 +61,16 @@ app.get('/show-countries', async (req, res) => {
     const { data } = await trend.showCountries().then(data => res.json(data));
 
 });
+
+app.post('/findTrend/:country', async (req, res) => {
+    try {
+        const country = req.params.country;
+        const trendName = req.body;
+        console.log("testerak", trendName)
+        const { data } = await trend.findTrend(country, trendName).then(data => res.json(data));
+    }
+    catch (err) {
+        console.log(err);
+    }
+
+})
