@@ -4,10 +4,10 @@ const pretty = require("pretty");
 const fs = require("fs");
 
 
-const hashtag ="%23";
+const hashtag = "%23";
 const url2 = "https://getdaytrends.com";
 
-var countries =[
+var countries = [
     "algeria",
     "argentina",
     "australia",
@@ -75,115 +75,124 @@ var countries =[
 
 //collect all trend
 
-async function showCountries(){
+async function showCountries() {
 
-    countries = await [... countries];
+    countries = await [...countries];
     console.log(countries);
     return countries
 }
 
-async function getTrends(country) {
+async function getTrends(country, limit) {
 
     //Checks data is wanted to collected is exist
-    try{
+    try {
         let rawdata = fs.readFileSync(country + ".json")
         let json = JSON.parse(rawdata);
-        let currentTıme = Date.now();
+        let currentTime = Date.now();
 
-        if((currentTıme - json.timeStamp ) > 1800000){
+        if ((currentTime - json.timeStamp) > 1800000) {
             console.log("data is old")
             throw new Error("data is old");
         }
-        else{
+        else {
             console.log("data is new")
             return json;
         }
     }
 
-    catch(err){
+    catch (err) {
 
-//<td class="details small text-muted text-right">99.5K tweetler</td>
-    try{
+        //<td class="details small text-muted text-right">99.5K tweetler</td>
+        try {
 
-        var url1 = "https://getdaytrends.com/tr/"+ country +"/";
+            var url1 = "https://getdaytrends.com/tr/" + country + "/";
 
-        if(country === null){
-            url1 = "https://getdaytrends.com/tr/"; 
-            country = "worldwide";
-        }
+            if (country === null) {
+                url1 = "https://getdaytrends.com/tr/";
+                country = "worldwide";
+            }
 
-        const {data} = await axios.get(url1);
-        
-        const $ = cheerio.load(data);
-        const tbody = $(".card-body div");
-        console.log(pretty($("h1").text()));
-        var trends = [];
-        var rank = 1 
-       
-        //check if trend is active
-        if( $("h1").text().includes("Twitter Trendleri")){
-            const trs = tbody.find("tr");   
-            const title = trs.find("td");
-            const num = tbody.find("th");
-            
+            const { data } = await axios.get(url1);
 
-            
-            title.each((idx,el) => {
-           
-                const name ={Trend: {
-                    country:country,
-                    name:"",
-                    url:"",
-                    rank:0,
-                },
-                 }   
+            const $ = cheerio.load(data);
+            const tbody = $(".card-body div");
+            console.log(pretty($("h1").text()));
+            var trends = [];
+            var rank = 1
 
-                if($(el).children("a").text() !== ""){
+            //check if trend is active
+            if ($("h1").text().includes("Twitter Trendleri")) {
+                const trs = tbody.find("tr");
+                const title = trs.find("td");
+                const num = tbody.find("th");
 
-                name.Trend.name = $(el).children("a").text();
 
-                
-                if($(el).children("a").attr("href") !== undefined){
-                    name.Trend.url= $(el).children("a").attr("href");
-                    name.Trend.rank = rank;
-                    rank++;
+
+                title.each((idx, el) => {
+
+
+                    const name = {
+                        Trend: {
+                            country: country,
+                            name: "",
+                            url: "",
+                            rank: 0,
+                        },
+                    }
+                    console.log("index", limit);
+
+                    if ((rank <= limit && limit != 0) || limit == 0) {
+
+                        if ($(el).children("a").text() !== "") {
+
+                            name.Trend.name = $(el).children("a").text();
+
+
+                            if ($(el).children("a").attr("href") !== undefined) {
+                                name.Trend.url = $(el).children("a").attr("href");
+                                name.Trend.rank = rank;
+                                rank++;
+                            }
+
+
+                            trends.push(name);
+
+                        }
+                    }
+
+                    name.timeStamp = Date.now();
+
+
+
+                });
+            }
+
+            console.log(trends)
+            var fileName = country + ".json";
+            //write to file
+            fs.writeFile(fileName, JSON.stringify(trends, null, 2), (err) => {
+                if (err) {
+                    console.error(err);
+                    return;
                 }
+                console.log("Successfully written data to file");
+            });
+            trends = await { ...trends };
 
-                
-                trends.push(name);
-                
-            }
-            name.timeStamp = Date.now();
-        
-         });   
+            return trends;
         }
 
-        console.log(trends)
-        var fileName = country + ".json";
-        //write to file
-        fs.writeFile(fileName, JSON.stringify(trends, null, 2), (err) => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-            console.log("Successfully written data to file");
-        });
-        trends = await {...trends};
-        
-              return trends;
-    }   
-
-    catch(err){
-        console.log(err);
+        catch (err) {
+            console.log(err);
+        }
     }
-}
-    
+
 }
 
 //collect trend data
-async function getTrendInfo(country,name){
+async function getTrendInfo(country, name) {
 
-    try{
+    try {
 
         name = name.toLowerCase();
         country = country.toLowerCase()
@@ -192,29 +201,29 @@ async function getTrendInfo(country,name){
         let trends = JSON.parse(rawdata);
         const keys = Object.keys(trends);
         let trend = {}
-        
+
 
         keys.forEach(key => {
-            try{
-                if(trends[key].Trend.name.toLowerCase().includes(name) && trends[key].Trend.country.toLowerCase().includes(country)){
-                    trend = {... trends[key].Trend}
-                    
-                
-                 }
-                 else{
-                    //console.log("Trend not found");
-                 }
+            try {
+                if (trends[key].Trend.name.toLowerCase().includes(name) && trends[key].Trend.country.toLowerCase().includes(country)) {
+                    trend = { ...trends[key].Trend }
+
+
                 }
-            catch(err){
+                else {
+                    //console.log("Trend not found");
+                }
+            }
+            catch (err) {
                 console.log(err);
-                
+
             };
         });
-      //  console.log(trend);
+        //  console.log(trend);
 
-        const {data} = await axios.get( url2 + trend.url);
+        const { data } = await axios.get(url2 + trend.url);
         const $ = cheerio.load(data);
-       // console.log(pretty( $.html()));
+        // console.log(pretty( $.html()));
         const numOfTweet = $(".desc div").html();
 
         var div = $(".row.stats.mb-3.mb-md-4.mt-3 div").html();
@@ -228,11 +237,11 @@ async function getTrendInfo(country,name){
         trend.highestRank = await highestRank;
 
         //console.log(trend);
-        trend = await {...trend};
+        trend = await { ...trend };
 
         return trend;
     }
-    catch(err){
+    catch (err) {
         console.log(err);
     }
 }
