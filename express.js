@@ -13,7 +13,9 @@ app.listen(process.env.PORT || 5000, () => { console.log('Server is running') })
 
 app.get('/', async (req, res) => {
     try {
-        const { data } = await trend.getTrends(null).then(data => res.json(data));
+        const limit = 0;
+
+        const { data } = await trend.getTrends(null, limit).then(data => res.json(data));
     }
     catch (err) {
         res.status(400).json({ 'message': 'invalid endpoint' });
