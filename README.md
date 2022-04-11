@@ -19,9 +19,11 @@ This api collects twitter trends around the world, or you can collect trends cou
 GET /
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `No Parameter` | `string` | Collects worldwide twitter trend |
+| Parameter | Type     | Description                |            |Optional|
+| :-------- | :------- | :------------------------- |            |;-------|
+| `No Parameter` | `string` | Collects worldwide twitter trend | | False  |
+|`Limit`         | `int`    | Limit the data entry             | | True   |
+
 
 #### Get item
 
@@ -29,9 +31,10 @@ GET /
 GET /trend/${country}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `country` | `string` | Collects twitter trends from selected country |
+| Parameter | Type     | Description                       |                  |Optional|
+| :-------- | :------- | :-------------------------------- |                  |;-------|
+| `country` | `string` | Collects twitter trends from selected country |      | False  |
+|`Limit`         | `int`    | Limit the data entry                     |      | True   |
 
 ```http
 GET /getinfo/${country}/${trend}
@@ -40,7 +43,13 @@ GET /getinfo/${country}/${trend}
 |:---------|------|-------------|
 |`coutry`,`trend`  |`string`|`more info about trend`|
 
-
+```http
+POST /findTrend/:country
+```
+|Parameter | Type | Description |
+|:---------|------|-------------|
+|`coutry`,`trend`  |`string`|`more info about trend`|
+You have to send json file which you want to find specific trends
 
 ## Installation
 
